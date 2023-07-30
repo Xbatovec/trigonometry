@@ -1,1 +1,1 @@
-OMG SUPER README
+Useful tool for learning trigonometry.
