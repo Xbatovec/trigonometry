@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry</title>
+    <link rel='stylesheet' href='assets/css/index.css'>
+</head>
+<body>
+    <!-- content -->
+    <div id="box">
+
+        <!-- plane -->
+        <svg id="plane-svg" height="750" width="750">
+            <circle cx="375" cy="375" r="340" stroke="black" stroke-width="1" fill="white"/>
+            <line x1="0" y1="375" x2="750" y2="375" style="stroke:red; stroke-width:1" stroke-dasharray="10,7" />
+            <line x1="375" y1="0" x2="375" y2="750" style="stroke:blue; stroke-width:1" stroke-dasharray="10,7" />
+            <line x1="715" y1="0" x2="715" y2="750" style="stroke:#30cf00; stroke-width:1.5" stroke-dasharray="10,7" />
+            <line x1="0" y1="35" x2="750" y2="35" style="stroke:#af25e6; stroke-width:1.5" stroke-dasharray="10,7" />
+
+            <line id="lineCos" x1="0" y1="0" x2="0" y2="0" style="stroke:red; stroke-width:2" />
+            <line id="lineSin" x1="0" y1="0" x2="0" y2="0" style="stroke:blue; stroke-width:2" />
+            <line id="lineTan" x1="0" y1="0" x2="0" y2="0" style="stroke:#30cf00; stroke-width:2" />
+            <line id="lineCot" x1="0" y1="0" x2="0" y2="0" style="stroke:#af25e6; stroke-width:2" />
+            <line id="lineRadius" x1="0" y1="0" x2="0" y2="0" style="stroke:#888888; stroke-width:2" />
+            <line id="lineRadiusAxis" x1="0" y1="0" x2="0" y2="0" style="stroke:#888888; stroke-width:1.5" stroke-dasharray="10,7" />
+
+            <text id="cosValue" x="0" y="0" fill="red" style="user-select: none;"></text>
+            <text id="sinValue" x="0" y="0" fill="blue" style="user-select: none;"></text>
+            <text id="tanValue" x="0" y="0" fill="#30cf00" style="user-select: none;"></text>
+            <text id="cotValue" x="0" y="0" fill="#af25e6" style="user-select: none;"></text>
+
+            <text x="355" y="395" fill="black" style="user-select: none;">O</text>
+            <text x="380" y="395" fill="black" style="user-select: none;">
+                <tspan x="380" y="395">[</tspan>
+                <tspan x="385" y="395" fill="red">0</tspan>
+                <tspan x="394" y="395">;</tspan>
+                <tspan x="399" y="395" fill="blue">0</tspan>
+                <tspan x="408" y="395">]</tspan>
+            </text>
+
+            <text x="675" y="395" fill="black" style="user-select: none;">
+                <tspan x="675" y="395">[</tspan>
+                <tspan x="679" y="395" fill="red">1</tspan>
+                <tspan x="687" y="395">;</tspan>
+                <tspan x="692" y="395" fill="blue">0</tspan>
+                <tspan x="701" y="395">]</tspan>
+            </text>
+
+            <text x="380" y="60" fill="black" style="user-select: none;">
+                <tspan x="380" y="60">[</tspan>
+                <tspan x="385" y="60" fill="red">0</tspan>
+                <tspan x="394" y="60">;</tspan>
+                <tspan x="399" y="60" fill="blue">1</tspan>
+                <tspan x="408" y="60">]</tspan>
+            </text>
+
+            <text x="45" y="395" fill="black" style="user-select: none;">
+                <tspan x="45" y="395">[</tspan>
+                <tspan x="49" y="395" fill="red">-1</tspan>
+                <tspan x="61" y="395">;</tspan>
+                <tspan x="67" y="395" fill="blue">0</tspan>
+                <tspan x="76" y="395">]</tspan>
+            </text>
+
+            <text x="380" y="700" fill="black" style="user-select: none;">
+                <tspan x="380" y="700">[</tspan>
+                <tspan x="385" y="700" fill="red">0</tspan>
+                <tspan x="394" y="700">;</tspan>
+                <tspan x="399" y="700" fill="blue">-1</tspan>
+                <tspan x="412" y="700">]</tspan>
+            </text>
+        </svg>
+
+        <!-- values -->
+        <div id="values">
+            <div id="funcValues">
+                <div>
+                    <h3>Cosinus:</h2>
+                    <p id="cosTableValue" style="color: red;">0.0000</p>
+                </div>
+                <div>
+                    <h3>Sinus:</h2>
+                    <p id="sinTableValue" style="color: blue;">0.0000</p>
+                </div>
+                <div>
+                    <h3>Tangent:</h2>
+                    <p id="tanTableValue" style="color: #30cf00;">0.0000</p>
+                </div>
+                <div>
+                    <h3>Cotangent:</h2>
+                    <p id="cotTableValue" style="color: #af25e6;">0.0000</p>
+                </div>
+            </div>
+            <div id="graphs">
+                <div id="cosGraphBox">
+                    <div id="cosGraphFormula" class="graphFormula">
+                        <p>f: y = </p>
+                        <div>
+                            <input value="1">
+                        </div>
+                        <p>cos</p>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <div style="display: flex; align-items: center; border-bottom: 1px black solid; margin: 0 4px;">
+                                <input value="1">
+                                <p>x</p>
+                            </div>
+                            <input value="1">
+                        </div>
+                        <p>+</p>
+                        <div>
+                            <input value="0">
+                        </div>
+                        <p>π</p>
+                    </div>
+                    <canvas id="cosGraph" height="200" width="675"></canvas>
+                </div>
+                <canvas id="sinGraph" height="200" width="675"></canvas>
+                <canvas id="tanGraph"></canvas>
+                <canvas id="cotGraph"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="assets/js/var.js"></script>
+    <script src="assets/js/trig.js"></script>
+    <script src="assets/js/graph.js"></script>
+    <script src="assets/js/render.js"></script>
+    <script src="assets/js/event.js"></script>
+</body>
+</html>

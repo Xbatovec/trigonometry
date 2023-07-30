@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* box */
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; height: 100vh;
+}
+
+/* plane */
+#plane-svg {
+    position: absolute;
+    cursor: grab;
+}
+
+/* values */
+#values {
+    position: absolute;
+    top: 25px; left: 800px;
+    width: 500px;
+}
+
+#funcValues {
+    width: 190px;
+}
+
+#funcValues div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+/* graphs */
+#graphs {
+    width: 750px;
+}
+
+#cosGraph {
+    
+}
+
+.graphFormula {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.graphFormula input {
+    margin: 3px 5px;
+}
+
+.graphFormula p {
+    display: flex;
+}
+
+/* settings */
+#settings {
+    width: 250px; height: 100%;
+    background-color: black;
+}
